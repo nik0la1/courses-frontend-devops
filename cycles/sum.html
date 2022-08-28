@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Программа которая подчитывает сумму чисел от одного ло n и проверяет корекность веденных значений пользователем данных
+        // Программа выводит числа от нуля до n введеным пользователем
+        /*var n = +prompt("Пожалуйста, введите чило");
+        for(var i = 0; i <= n; i++){
+            document.write(i + "<br>");
+        }*/
+        // Программа выводит числа от нуля до n введеным пользователем и выводит сумму от одного до n
+        /*var n = +prompt("Пожалуйста, введите чило");
+        var sum = 0;
+        for(var i = 0; i <= n; i++){
+            sum += i; //sum = sum + i
+            document.write(i + " " + sum + " " + "<br>");
+        }*/
+        // Программа выводит числа от нуля до n введеным пользователем и выводит сумму от одного до n и говорит пользователю когда он ввел символы вместо числа
+        /*var n = +prompt("Пожалуйста, введите чило");
+
+        if(isNaN(n)){
+            document.write("Нужно было вводить число");
+        } else if(n < 0){
+            document.write("Нужно было вводить положительное число");
+        }else {
+            var sum = 0;
+            for(var i = 0; i <= n; i++){
+                sum += i; //sum = sum + i
+            }
+            document.write(i + " " + sum + " " + "<br>");
+        }*/ 
+        // Упрощаем код
+        /*var n = +prompt("Пожалуйста, введите чило");
+
+        if(isNaN(n) || n < 0){
+            document.write("Нужно было вводить положительное число");
+        }else {
+            var sum = 0;
+            for(var i = 0; i <= n; i++){
+                sum += i; //sum = sum + i
+            }
+            document.write(i + " " + sum + " " + "<br>");
+        }*/ 
+
+        // Дадим пользователю исправить ошибку при введении числа
+        /*var n = +prompt("Пожалуйста, введите чило");
+
+        while(isNaN(n) || n < 0){
+            n = +prompt("Пожалуйста, введите положительное чило");
+        }
+        var sum = 0;
+        for(var i = 0; i <= n; i++){
+            sum += i; //sum = sum + i
+            document.write(i + " " + sum + " " + "<br>");
+            }*/
+        
+        // Используе цикл Do while
+        do{ // сделать что надодится в нутри тела цикла до тех пока выполняется выражения которое находится while между скобочек 
+            n = +prompt("Пожалуйста, введите положительное чило");
+        }while(isNaN(n) || n < 0)
+
+        var sum = 0;
+        for(var i = 0; i <= n; i++){
+            sum += i; //sum = sum + i
+            document.write(i + " " + sum + " " + "<br>");
+            }
+        
+    </script>
+</body>
+</html>
