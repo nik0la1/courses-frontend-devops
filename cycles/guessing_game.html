@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Игра угодайка
+        var answer = parseInt(Math.random() * 100); // Компьютер выбирает число от нуля до 100
+        var userAnswer = +prompt("Угадай число от 0 до 100");
+        var maxTryCount = 5;
+
+        for(var tryCount = 1; tryCount < maxTryCount; tryCount++){
+            if(userAnswer == answer){
+                alert("Поздравляю, вы угадали! ");
+                break
+            } else if(userAnswer > answer){
+                alert("Вы ввели слишком большое число ");
+            } else if(userAnswer < answer){
+                alert("Вы ввели слишком маленькое число ");
+            }
+            
+            userAnswer = +prompt("Попробуйте еще раз. Угадай число от 0 до 100\n У вас осталось " + (maxTryCount - tryCount) + " попыток<br>");
+        }
+        if(tryCount > maxTryCount)
+            document.write("Вы проиграли ");
+        document.write("Правельный ответ: " + answer);
+    </script>
+</body>
+</html>
